@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project Front-End was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Live Application
+
+Front-end hosted on Firebase - Open (https://mern-application2021.web.app/)
+Backend Hosted on heroku - open (https://react-mern-application.herokuapp.com/api)
 
 ## Available Scripts
 
