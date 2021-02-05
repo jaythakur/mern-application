@@ -1,0 +1,12 @@
+{
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 80,
+  "prettier.trailingComma": "none",
+  "editor.tabSize": 2,
+  "eslint.alwaysShowStatus": true,
+  "eslint.lintTask.enable": true,
+  "eslint.format.enable": true,
+  "eslint.debug": true
+}
