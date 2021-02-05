@@ -55,6 +55,7 @@ Button.defaultProps = {
   exact: true,
   onClick: () => {},
   children: '',
+  type: 'button',
 };
 
 Button.propTypes = {
@@ -62,7 +63,7 @@ Button.propTypes = {
   inverse: PropTypes.bool,
   danger: PropTypes.bool,
   to: PropTypes.string,
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   size: PropTypes.string,
   disabled: PropTypes.bool,
   href: PropTypes.string,

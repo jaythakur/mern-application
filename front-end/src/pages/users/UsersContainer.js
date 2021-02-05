@@ -10,15 +10,11 @@ const UsersContainer = () => {
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
 
   useEffect(() => {
-    try {
-      sendRequest(`${process.env.REACT_APP_BACKEND_URL}/users`).then(
-        (responseData) => {
-          setUsers(responseData.users);
-        },
-      );
-    } catch (err) {
-      console.log(err);
-    }
+    sendRequest(`${process.env.REACT_APP_BACKEND_URL}/users`).then(
+      (responseData) => {
+        setUsers(responseData.users);
+      },
+    );
   }, [sendRequest]);
   return (
     <>

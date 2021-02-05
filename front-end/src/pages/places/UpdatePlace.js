@@ -84,23 +84,19 @@ const UpdatePlace = () => {
 
   const placeSubmitHandler = async (event) => {
     event.preventDefault();
-    try {
-      await sendRequest(
-        `${process.env.REACT_APP_BACKEND_URL}/places/${placeId}`,
-        'PATCH',
-        JSON.stringify({
-          title: formState.inputs.title.value,
-          description: formState.inputs.description.value,
-        }),
-        {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${auth.token}`,
-        },
-      );
-      history.push(`/${auth.userId}/places`);
-    } catch (err) {
-      console.log(err);
-    }
+    await sendRequest(
+      `${process.env.REACT_APP_BACKEND_URL}/places/${placeId}`,
+      'PATCH',
+      JSON.stringify({
+        title: formState.inputs.title.value,
+        description: formState.inputs.description.value,
+      }),
+      {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${auth.token}`,
+      },
+    );
+    history.push(`/${auth.userId}/places`);
   };
 
   return (

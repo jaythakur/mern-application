@@ -2,7 +2,7 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import AuthContainer from '../../../pages/auth/AuthContainer';
+import AuthContainer from '../../../pages/auth/AuthContainer'; 
 
 describe('render <AuthContainer> Component', () => {
   it('should render component', () => {
@@ -37,5 +37,14 @@ describe('render <AuthContainer> Component', () => {
     expect(passwordInput).toHaveValue('123456');
     expect(screen.getByText('LOGIN').hasAttribute('disabled')).toBe(false);
     fireEvent.submit(submitBtn);
+  });
+  it('Should submit signup form', () => {
+    render(<AuthContainer />);
+    const button = screen.getByText('SWITCH TO SIGNUP');
+    expect(button).toBeDefined();
+    fireEvent.click(button);
+    expect(screen.getByText('SWITCH TO LOGIN')).toBeDefined();
+    expect(screen.getByText('SIGNUP')).toBeDefined();
+    fireEvent.submit(screen.getByText('SIGNUP'));
   });
 });
